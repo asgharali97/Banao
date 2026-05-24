@@ -14,8 +14,13 @@ export const usersTable = pgTable("users", {
 
   email: varchar("email", { length: 255 }).notNull().unique(),
   emailVerified: boolean("email_verified").default(false),
+  passwordHash: varchar("password_hash", { length: 255 }).notNull(),
 
-  profileImageUrl: text("profile_image_url"),
+  avatarUrl: text("avatarUrl"),
+
+  refreshToken: text("refresh_token"),
+  refreshTokenExpiry: timestamp("refresh_token_expiry"),
+  googleId: varchar("google_id", {length: 255}),
 
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").$onUpdate(() => new Date()),
