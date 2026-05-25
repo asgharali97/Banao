@@ -20,7 +20,6 @@ export const usersTable = pgTable("users", {
 
   refreshToken: text("refresh_token"),
   refreshTokenExpiry: timestamp("refresh_token_expiry"),
-  googleId: varchar("google_id", {length: 255}),
 
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").$onUpdate(() => new Date()),

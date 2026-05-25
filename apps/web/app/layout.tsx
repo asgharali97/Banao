@@ -13,8 +13,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Streamyst",
-  description: "Media Forwarding",
+  title: "Banao",
+  description: "Banao forms builder tool",
 };
 
 export default function RootLayout({
